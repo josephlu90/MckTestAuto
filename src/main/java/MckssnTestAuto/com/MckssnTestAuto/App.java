@@ -35,7 +35,7 @@ public class App
        WebElement NGO = driver.findElement(By.id("mmlink0"));
        action.moveToElement(NGO).click().perform();
        driver.findElement(By.xpath("//*[@id='lnk9']/table/tbody/tr/td[1]/div/a")).click();
-       //System.out.println("NGO opened");
+       System.out.println("NGO opened");
        
        
     }
