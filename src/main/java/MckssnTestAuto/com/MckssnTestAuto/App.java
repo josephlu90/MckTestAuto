@@ -31,16 +31,16 @@ public class App
        action.moveToElement(NGO).click();
        driver.findElement(By.cssSelector("#wcm-left180 > div.wcm-lnav > ul:nth-child(2) > li:nth-child(1) > a")).click();
        System.out.println("NGO opened");
-       //driver.findElement(By.cssSelector("body > div:nth-child(22) > div.action-bar > div > span > button.btn-act-bar-secondary")).click();
-       //driver.findElement(By.xpath("/html/body/div[3]/div[3]/div/span/button[1]")).click();
-       //String h1 = driver.getWindowHandle();// original handle
-       //System.out.println("First handle = " + h1);
-       //WebElement clickhere = driver.findElement(By.xpath("/html/body/div[3]/div[3]/div/span/button[1]"));
-       //clickhere.click();//moved to a new child page<
-
-       //String h2 = driver.getWindowHandle();
-       //System.out.println("Second handle = " + h2);//
-       //WebElement clickhere2 = driver.findElement(By.xpath("/html/body/div[3]/div[3]/div/span/button[1]"));
-       //clickhere2.click();//moved to a new child page<
+    
+       //overwindow detected
+       driver.findElement(By.xpath("/html/body/div[2]"));
+       System.out.println("superimposed screen");
+       //dialog window detected
+       driver.findElement(By.xpath("/html/body/div[3]"));
+       System.out.println("Warning message");
+       
+       driver.switchTo().window("Alert");
+       driver.findElement(By.xpath("/html/body/div[3]/div[3]/div[1]/span/button[1]")).click();
+       System.out.println("okay");
     }
 }
