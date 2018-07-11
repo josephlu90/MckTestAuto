@@ -35,6 +35,7 @@ public class App
        //overwindow detected
        driver.findElement(By.xpath("/html/body/div[2]"));
        System.out.println("superimposed screen");
+       
        //dialog window detected
        driver.findElement(By.xpath("/html/body/div[3]"));
        System.out.println("Warning message");
